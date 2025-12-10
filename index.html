@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>MiniFactura</title>
+    <style>
+      article {
+        width: min(300px, 100%);
+        margin: auto;
+        border: thin solid black;
+        box-sizing: border-box;
+        padding-inline: 1em;
+        font-family: monospace;
+
+        header,
+        footer {
+          text-align: center;
+        }
+
+        address,
+        dl {
+          padding-bottom: 1em;
+          border-bottom: thin dashed black;
+        }
+
+        dl {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        dt,
+        dd {
+          padding-block: .5em;
+        }
+
+        dd {
+          white-space: nowrap;
+          margin: 0;
+          text-align: end;
+        }
+
+        dl:nth-child(3) {
+          display: initial;
+
+          dt {
+            font-weight: bold;
+          }
+
+          dd {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+
+        footer {
+          padding-bottom: 1em;
+        }
+      }
+
+      .invoice__total {
+        border-top: thick solid black;
+        padding-top: 1em;
+
+        dt:first-child,
+        dd:first-child {
+          font-weight: bold;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h2>Panadería El Buen Pan</h2>
+        <address>
+          Sucursal Principal <br />
+          Av. Principal 123 <br />
+          Tel: 987654321
+        </address>
+      </header>
+      <dl>
+        <dt>TICKET:</dt>
+        <dd>#000007</dd>
+        <dt>FECHA:</dt>
+        <dd>14/11/2025 09:37</dd>
+        <dt>CLIENTE:</dt>
+        <dd>Juan Pérez</dd>
+        <dt>ATENDIÓ:</dt>
+        <dd>Admin Sistema</dd>
+      </dl>
+      <dl>
+        <dt>pan de arequipe</dt>
+        <dd>
+          <span>1 x 3/ 12.00</span>
+          <span>5/12.00</span>
+        </dd>
+      </dl>
+      <dl class="invoice__total">
+        <dt>TOTAL:</dt>
+        <dd>S/ 12.00</dd>
+        <dt>MÉTODO DE PAGO:</dt>
+        <dd>TARJETA</dd>
+      </dl>
+      <footer>
+        ¡GRACIAS POR SU COMPRA! <br />
+        Vuelve pronto <br /><br />
+        Sistema SIPAN
+      </footer>
+    </article>
+  </body>
+</html>
